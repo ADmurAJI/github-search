@@ -1,1 +1,1 @@
-# github-search
+# Проект github-search. TypeScript.
