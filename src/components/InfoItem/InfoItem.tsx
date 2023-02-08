@@ -6,7 +6,7 @@ export interface InfoItemProps {
   isLink?: boolean;
 }
 
-export const InfoItem = ({ icon, text, isLink }: InfoItemProps) => {
+export const InfoItem = ({ icon, isLink, text }: InfoItemProps) => {
   const currentText = text || 'Not Available';
   let currentHref = '';
 
@@ -15,7 +15,7 @@ export const InfoItem = ({ icon, text, isLink }: InfoItemProps) => {
   }
 
   return (
-    <div className={`${styles.infoItem}${text ? '' : `${styles.empty}`}`}>
+    <div className={`${styles.infoItem}${text ? '' : ` ${styles.empty}`}`}>
       {icon}
       <div>
         {isLink && text ? (
@@ -25,7 +25,7 @@ export const InfoItem = ({ icon, text, isLink }: InfoItemProps) => {
             rel="noreferrer"
             className={styles.link}
           >
-            currentText
+            {currentText}
           </a>
         ) : (
           currentText
